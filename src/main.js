@@ -16,7 +16,9 @@ import {
   Swipe,
   SwipeItem,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  Tab,
+  Tabs
 } from "vant";
 Vue.use(Button)
   .use(Icon)
@@ -25,7 +27,9 @@ Vue.use(Button)
   .use(Swipe)
   .use(SwipeItem)
   .use(Tabbar)
-  .use(TabbarItem);
+  .use(TabbarItem)
+  .use(Tab)
+  .use(Tabs);
 new Vue({
   router,
   store,

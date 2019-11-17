@@ -1,58 +1,51 @@
 <template>
   <div class="home">
-    <van-nav-bar :border="false">
-      <slot slot="left" name="left">
-        <van-icon name="arrow-left" size="20px"/>
-      </slot>
-      <slot slot="title" name="title">微医云课堂</slot>
-      <slot slot="right" name="right"></slot>
-    </van-nav-bar>
-    <van-search placeholder="请输入关键词" shape="round" v-model="value"/>
+    <vheader></vheader>
     <div class="contariner">
       <van-swipe :loop="false" indicator-color="white">
         <van-swipe-item>
           <img src="../assets/images/banner.png" alt class="img">
         </van-swipe-item>
       </van-swipe>
-      <div class="lesson-title">
-        <h3>直播课程</h3>
-        <a href="javascript:;">
-          <span>更多</span>
-          <van-icon name="arrow"/>
-        </a>
-      </div>
-      <ul class="card-box">
-        <li>
-          <div class="card-img"></div>
-          <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
-        </li>
-        <li>
-          <div class="card-img"></div>
-          <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
-        </li>
-        <li>
-          <div class="card-img"></div>
-          <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
-        </li>
-        <li>
-          <div class="card-img"></div>
-          <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
-        </li>
+      <card myclass="col-2">
+        <div class="lesson-title" slot="title">
+          <h3>直播课程</h3>
+          <a href="javascript:;">
+            <span>更多</span>
+            <van-icon name="arrow"/>
+          </a>
+        </div>
+      </card>
+      <card myclass="col-3">
+        <div class="lesson-title" slot="title">
+          <h3>最新课程</h3>
+          <a href="javascript:;">
+            <span>更多</span>
+            <van-icon name="arrow"/>
+          </a>
+        </div>
+      </card>
 
-        <li>
-          <div class="card-img"></div>
-          <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
-        </li>
-      </ul>
+      <card myclass="col-3">
+        <div class="lesson-title" slot="title">
+          <h3>热门课程</h3>
+          <a href="javascript:;">
+            <span>更多</span>
+            <van-icon name="arrow"/>
+          </a>
+        </div>
+      </card>
+      <div style="height:30px;overflow: visible;background: transparent;"></div>
     </div>
   </div>
 </template>
 
 <script>
+import card from "@/components/card.vue";
+import vheader from "@/components/header.vue";
 export default {
   data() {
     return {
-      value: ""
     };
   },
   watch: {},
@@ -66,7 +59,10 @@ export default {
       // Toast("按钮");
     }
   },
-  components: {}
+  components: {
+    card,
+    vheader
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -83,60 +79,28 @@ export default {
     padding: 0 15px;
     box-sizing: border-box;
   }
-  .lesson-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px 25px 15px;
-    box-sizing: border-box;
-    h3 {
-      font-size: 24px;
-      color: #28354c;
-      letter-spacing: 0;
-      line-height: 24px;
-    }
-    a {
-      font-size: 12px;
-      color: #83889a;
-      letter-spacing: 0;
-      text-align: right;
-    }
-  }
+
   .contariner {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     height: calc(100% - 46px - 54px - 15px - 1.33333rem);
-  }
-  .card-box {
-    overflow: hidden;
-    padding: 0 15px;
-    box-sizing: border-box;
-    li {
-      width: 165px;
-      margin-top: 16px;
-      margin-right: 12px;
-      float: left;
-      .card-img {
-        width: 100%;
-        height: 95px;
-      }
-      .card-descript {
-        width: 154px;
-        height: 40px;
-        line-height: 20px;
-        margin: 0 auto;
-        font-size: 14px;
+    .lesson-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 15px 25px 15px;
+      box-sizing: border-box;
+      h3 {
+        font-size: 24px;
         color: #28354c;
         letter-spacing: 0;
-        margin-top: 8px;
+        line-height: 24px;
       }
-      .card-img {
-        width: 100%;
-        background: url("../assets/images/list.png") no-repeat;
-        background-size: cover;
-      }
-      &:nth-child(even) {
-        margin-right: 0;
+      a {
+        font-size: 12px;
+        color: #83889a;
+        letter-spacing: 0;
+        text-align: right;
       }
     }
   }
