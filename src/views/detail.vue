@@ -167,6 +167,9 @@ export default {
           line-height: 12px;
           margin-right: 8px;
         }
+        .tags {
+          font-size: 0px;
+        }
         .van-tag {
           font-size: 10px;
           margin-right: 8px;
