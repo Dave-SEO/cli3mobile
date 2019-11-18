@@ -46,7 +46,6 @@
         </div>
       </div>
     </div>
-    <div style="height:300px"></div>
     <van-popup v-model="show" position="bottom" :style="{ height: '20%' }">
       <van-button type="default" @click="show = false">取消</van-button>
     </van-popup>
@@ -74,8 +73,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .detail {
-  //   height: 100%;
-  overflow: scroll;
+  height: 100%;
+  overflow: auto;
   background: #f8f8f8;
   .player-box {
     width: 100%;
