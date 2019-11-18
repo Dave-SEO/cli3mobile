@@ -1,13 +1,13 @@
 <template>
   <div class="index">
     <div class="index-1">
-      <router-view/>
+      <router-view />
     </div>
     <van-tabbar v-model="active" :route="true" :border="false">
       <van-tabbar-item icon="wap-home-o" to="/home">主页</van-tabbar-item>
       <van-tabbar-item icon="qr" to="/lesson">分类</van-tabbar-item>
-      <van-tabbar-item icon="search">我的课堂</van-tabbar-item>
-      <van-tabbar-item icon="friends-o">个人中心</van-tabbar-item>
+      <van-tabbar-item icon="search" to="/mylesson">我的课堂</van-tabbar-item>
+      <van-tabbar-item icon="friends-o" to="/userCenter">个人中心</van-tabbar-item>
     </van-tabbar>
   </div>
 </template>

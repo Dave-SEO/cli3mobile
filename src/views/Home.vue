@@ -4,7 +4,7 @@
     <div class="contariner">
       <van-swipe :loop="false" indicator-color="white">
         <van-swipe-item>
-          <img src="../assets/images/banner.png" alt class="img">
+          <img src="../assets/images/banner.png" alt class="img" />
         </van-swipe-item>
       </van-swipe>
       <card myclass="col-2">
@@ -12,7 +12,7 @@
           <h3>直播课程</h3>
           <a href="javascript:;">
             <span>更多</span>
-            <van-icon name="arrow"/>
+            <van-icon name="arrow" />
           </a>
         </div>
       </card>
@@ -21,7 +21,7 @@
           <h3>最新课程</h3>
           <a href="javascript:;">
             <span>更多</span>
-            <van-icon name="arrow"/>
+            <van-icon name="arrow" />
           </a>
         </div>
       </card>
@@ -31,7 +31,7 @@
           <h3>热门课程</h3>
           <a href="javascript:;">
             <span>更多</span>
-            <van-icon name="arrow"/>
+            <van-icon name="arrow" />
           </a>
         </div>
       </card>
@@ -45,8 +45,7 @@ import card from "@/components/card.vue";
 import vheader from "@/components/header.vue";
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   watch: {},
   created() {},
