@@ -3,7 +3,9 @@
     <div class="container">
       <div class="logo"></div>
       <div class="btn-box">
-        <van-button round type="info" size="large">登陆</van-button>
+        <van-button round type="info" size="large" to="/loginPage"
+          >登陆</van-button
+        >
         <van-button round plain type="info" size="large">注册</van-button>
       </div>
     </div>

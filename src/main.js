@@ -18,7 +18,13 @@ import {
   Tabbar,
   TabbarItem,
   Tab,
-  Tabs
+  Tabs,
+  Image,
+  Lazyload,
+  Cell,
+  CellGroup,
+  Tag,
+  Popup
 } from "vant";
 Vue.use(Button)
   .use(Icon)
@@ -29,7 +35,13 @@ Vue.use(Button)
   .use(Tabbar)
   .use(TabbarItem)
   .use(Tab)
-  .use(Tabs);
+  .use(Tabs)
+  .use(Image)
+  .use(Lazyload)
+  .use(Cell)
+  .use(CellGroup)
+  .use(Tag)
+  .use(Popup);
 new Vue({
   router,
   store,

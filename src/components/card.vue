@@ -1,17 +1,16 @@
 <template>
   <div class="card">
-   
     <slot name="title"></slot>
     <ul class="card-box" :class="myclass">
-      <li>
+      <li @click="detailClick">
         <div class="card-img"></div>
         <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
       </li>
-      <li>
+      <li @click="detailClick">
         <div class="card-img"></div>
         <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
       </li>
-      <li>
+      <li @click="detailClick">
         <div class="card-img"></div>
         <p class="card-descript">马丁路德金的演讲：我有一个梦想</p>
       </li>
@@ -33,7 +32,11 @@ export default {
   },
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    detailClick() {
+      this.$router.push("/detail");
+    }
+  },
   components: {}
 };
 </script>
