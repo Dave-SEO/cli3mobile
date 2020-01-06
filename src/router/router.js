@@ -18,7 +18,7 @@ const routes = [
       {
         path: "/lesson",
         name: "lesson",
-        component: () => import("../views/lesson.vue")
+        component: () => import("../views/edit/tinymce-editor.vue")
       }
     ]
   }
